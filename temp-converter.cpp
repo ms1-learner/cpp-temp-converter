@@ -60,20 +60,24 @@ void convertFromKelvin() {
 
 int main() {
     std::cout << "Select the unit to convert. (f:Fahrenheit, c:Celsius, k:Kelvin)" << std::endl;
-    std::cout << ">> ";
 
     std::string user_input;
-    std::cin >> user_input;
+    while (true) {
+        std::cout << ">> ";
+        std::cin >> user_input;
 
-    if (user_input == "f") {
-        convertFromFahrenheit();
-    } else if (user_input == "c") {
-        convertFromCelsius();
-    } else if (user_input == "k") {
-        convertFromKelvin();
-    } else {
-        std::cout << "Incorrect input. Please try again later." << std::endl;
-        return 1;
+        if (user_input == "f") {
+            convertFromFahrenheit();
+            break;
+        } else if (user_input == "c") {
+            convertFromCelsius();
+            break;
+        } else if (user_input == "k") {
+            convertFromKelvin();
+            break;
+        } else {
+            std::cout << "Incorrect input. Please try again." << std::endl;
+        }
     }
 
     return 0;

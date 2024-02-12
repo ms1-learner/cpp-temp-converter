@@ -17,10 +17,27 @@ void convertFahrenheitToCelsius() {
 
     double celsius = 5.0 / 9.0 * (fahrenheit - 32.0);
     
-    std::cout << fahrenheit << " degrees Fahrenheit." << celsius << " degrees Celsius is " << std::endl;
+    std::cout << fahrenheit << " degrees Fahrenheit is " << celsius << " degrees Celsius " << std::endl;
 }
 
 
 int main() {
+    std::cout << "Enter c if you want to convert from Fahrenheit to Celsius" << std::endl;
+    std::cout << "Enter f if you want to convert from Celsius to Fahrenheit" << std::endl;
+
+    char input;
+    std::cin >> input;
+
+    switch (input) {
+        case 'c':
+            convertFahrenheitToCelsius();
+            break;
+        case 'f':
+            convertCelsiusToFahrenheit();
+            break;
+        default:
+            std::cout << "Incorrect input. Please try again later" << std::endl;
+    }
+
     return 0;
 }

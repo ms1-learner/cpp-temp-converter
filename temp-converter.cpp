@@ -48,7 +48,7 @@ void convertFahrenheitToKelvin() {
     double fahrenheit;
     std::cin >> fahrenheit;
 
-    double kelvin = 5.0 / 9.0 * (fahrenheit - 32.0) + 273.5;
+    double kelvin = 5.0 / 9.0 * (fahrenheit - 32.0) + 273.15;
 
     sleeptime(2000);
     std::cout << fahrenheit << " degrees Fahrenheit is " << kelvin << " degrees Kelvin." << std::endl;
@@ -62,7 +62,7 @@ void convertKelvinToCelsius() {
     double celsius = kelvin - 273.15;
 
     sleeptime(2000);
-    std::cout << kelvin << "degrees Kelvin is " << celsius << " degrees Celsius." << std::endl;
+    std::cout << kelvin << " degrees Kelvin is " << celsius << " degrees Celsius." << std::endl;
 }
 
 void convertKelvinToFahrenheit() {
@@ -73,7 +73,7 @@ void convertKelvinToFahrenheit() {
     double fahrenheit = 9.0 / 5.0 * (kelvin - 273.15) + 32.0;
 
     sleeptime(2000);
-    std::cout << kelvin << "degrees Kelvin is " << fahrenheit << " degrees Fahrenheit." << std::endl;
+    std::cout << kelvin << " degrees Kelvin is " << fahrenheit << " degrees Fahrenheit." << std::endl;
 }
 
 
